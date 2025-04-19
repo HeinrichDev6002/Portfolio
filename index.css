@@ -2,14 +2,16 @@ body{
     background-color: #fec89a;
     font-family:'Libre Baskerville', serif;
 }
-h1{
-    font-size: 22px;
-}
 h2{
     font-size: 36px;
 }
-li, p{
-    font-size: 22px;
+li, p, h1{
+    font-size: 14px;
+}
+@media(min-width: 750px){
+    li,p, h1{
+        font-size: 22px;
+    }
 }
 .nav-link{
 display: inline-block;
@@ -21,18 +23,23 @@ position: relative;
     text-decoration:none;
 }
 #header-container{
+    position: fixed;
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 20px;
-    margin-left: 75px;
-    margin-right: 75px;
+    padding: 25px 25px;
+
     position: fixed;
+    box-shadow: 0px 1px 7px rgb(0, 0, 0);
     top: 0;
     left: 0;
     right: 0;
+    background-color: #fec89a;
+    z-index: 1000;
 }
 #content-container{
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     margin: auto;
     margin-top: 200px;
     padding: 20px;
@@ -41,12 +48,14 @@ position: relative;
     box-shadow: 2px 3px 5px black;
 }
 #img-container{
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     margin: auto;
     display: flex;
 }
 .img-svg{
-    width: 75px;
+    width: 100%;
+    max-width: 75px;
     margin: 10px;
 }
 
